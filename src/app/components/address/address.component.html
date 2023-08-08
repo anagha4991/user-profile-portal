@@ -1,0 +1,21 @@
+<!-- <ng-container *ngIf="address">
+    <p>{{ address | json }}</p>
+</ng-container> -->
+<div class="address px-3">
+    <ng-container *ngIf="address != null && address != undefined;">
+        <div class="container">
+            <div class="more__details mt-2 mb-2">
+                <h3>Location</h3>
+                <p> <strong>{{address.city}}</strong> ,{{address.street}}, {{address.suite}}</p>
+                <small>Zipcode: {{address.zipcode}}</small> <br>
+                <small>Geographical Co-ordinates: {{address.geo.lat}}, {{address.geo.lng}}</small> <br>
+                <button class="btn btn-primary"> vIew On Map</button>
+            </div>
+        </div>
+    </ng-container>
+    <ng-template #noUser>
+        <div class="row">
+            no data
+        </div>
+    </ng-template>
+</div>

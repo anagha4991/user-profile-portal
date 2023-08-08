@@ -1,0 +1,23 @@
+<!-- <ng-container *ngIf="company">
+    <p>{{ company | json }}</p>
+</ng-container> -->
+<div class="company px-3">
+    <ng-container *ngIf="company != null && company != undefined;">
+        <div class="container">
+            <div class="more__details mt-2 mb-2">
+                <h3>Company Name</h3>
+                <p> <strong>{{company.name}}</strong></p>
+                <small>{{company.catchPhrase}}</small>
+            </div>
+            <div class="more__details mt-2 mb-2">
+                <h3>Business Type</h3>
+                <p> <strong>{{company.bs}}</strong></p>
+            </div>
+        </div>
+    </ng-container>
+    <ng-template #noUser>
+        <div class="row">
+            no data
+        </div>
+    </ng-template>
+</div>

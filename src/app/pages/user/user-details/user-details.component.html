@@ -1,0 +1,13 @@
+<!-- <ng-container *ngIf="data">
+    <p>{{ data | json }}</p>
+</ng-container> -->
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+        <app-user-profile [userData] ="data.usersData"></app-user-profile>
+        <app-address [address] = "data.usersData.address"></app-address>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+        <app-company [company] = "data.usersData.company"></app-company>
+    </div>
+</div>

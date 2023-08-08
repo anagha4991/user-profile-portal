@@ -1,0 +1,33 @@
+<!-- <ng-container *ngIf="userData">
+    <p>{{ userData | json }}</p>
+</ng-container> -->
+<div class="user__profile p-3">
+    <ng-container *ngIf="userData != null && userData != undefined;">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-start gap-2">
+                <img class="card-img-top" src="https://www.gravatar.com/avatar?d=mp" class="img-fluid rounded">
+                <div>
+                    <h2>{{userData.name}}</h2>
+                    <p>{{userData.username}}</p>
+                </div>
+            </div>
+            <div class="more__details mt-2 mb-2">
+                <h3>Email</h3>
+                <p>{{userData.email}}</p>
+            </div>
+            <div class="more__details mt-2 mb-2">
+                <h3>Phone</h3>
+                <p>{{userData.phone}}</p>
+            </div>
+            <div class="more__details mt-2 mb-2">
+                <h3>Website</h3>
+                <p>{{userData.website}}</p>
+            </div>
+        </div>
+    </ng-container>
+    <ng-template #noUser>
+        <div class="row">
+            no data
+        </div>
+    </ng-template>
+</div>

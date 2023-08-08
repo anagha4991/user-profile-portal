@@ -1,0 +1,34 @@
+.address{
+    h2{
+        font-weight: 600;
+        margin: 0;
+    }
+    p{
+        font-weight: 500;
+        margin: 0;
+        color: #898989;
+    }
+    .more__details{
+        h3{
+            font-weight: 600;
+            margin: 0;
+            font-size: 16px;
+        }
+        small{
+            color: #898989;
+        }
+        h6{
+            font-weight: 600;
+            font-size:14px;
+            color: #fff;
+            background-color: rgb(2, 39, 2);
+            padding: 10px;
+            border-radius: 25px;
+            text-align: center;
+            width: 20%;
+            span{
+                font-size:10px;
+            }
+        }
+    }
+}

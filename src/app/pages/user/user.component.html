@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <ng-container *ngIf="userData?.length; else noUser">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 mb-3" *ngFor="let user of userData;let index= index" >
+
+            <div class="card text-center" [id]="index">
+                <img class="card-img-top"
+                    src="../assets/images/bg.jpg" />
+                <img class="card-img-avatar rounded-circle" src="https://www.gravatar.com/avatar?d=mp" />
+                <div class="card-body">
+                    <h5 class="card-title">{{user?.name}}</h5>
+                    <p class="card-text text-muted">{{user?.email}}</p>
+                    <a  class="btn btn-outline-primary btn-block" (click)="userDetails(user)">View More Details</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </ng-container>
+    <ng-template #noUser>
+        <div class="row">
+            no data
+        </div>
+    </ng-template>
+    </div>
